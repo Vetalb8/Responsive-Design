@@ -1,0 +1,24 @@
+.tab__select {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  font-size: 10px;
+  color: #888888;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background: white url(../img/tringle.png) no-repeat 95% center;
+  border: 1px solid #bebebe;
+  cursor: pointer;
+}
+.tab__select:focus {
+  outline: none;
+}
+.tab__select::-ms-expand {
+  display: none;
+}

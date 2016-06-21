@@ -1,0 +1,147 @@
+@media all and (min-width: 750px) {
+  .page-header {
+    min-width: 200px;
+    width: 200px;
+    height: 100%;
+  }
+
+  .page-header__logo {
+    background: url("../img/logo-ipad.png") no-repeat 0;
+    height: 47px;
+    width: 175px;
+    position: absolute;
+    top: 24px;
+    right: 14px;
+  }
+
+  .page-header__menu-label {
+    display: none;
+    position: static;
+  }
+
+  .page-header__menu {
+    background-color: #333;
+    display: block;
+    height: 100%;
+    list-style: none;
+    margin: 88px 0;
+    padding: 0;
+    position: static;
+    width: 100%;
+  }
+
+  .page-header__link_active .fa {
+    display: none;
+  }
+
+  .page-header__link_consult .fa {
+    display: inline-block;
+  }
+
+  .page-header__link_logout .fa {
+    color: #c90026;
+  }
+
+  .fa-plus-circle {
+    font-size: 21px;
+  }
+
+  .page-main {
+    padding-right: 40px;
+    top: 0;
+    left: 230px;
+  }
+
+  .scroller {
+    position: relative;
+  }
+
+  .block__title {
+    font-size: 28px;
+    padding: 17px 5px 20px 0;
+  }
+
+  .page-main__project-last {
+    padding-right: 0;
+  }
+
+  .page-tabs li:first-child {
+    width: 40%;
+  }
+  .page-tabs li {
+    width: 60%;
+  }
+
+  .tab__button_expend {
+    width: 24%;
+  }
+
+  .buttons {
+    font-size: 0;
+    direction: rtl;
+  }
+
+  .btn {
+    display: inline-block;
+    width: 33.33%;
+    border-bottom: none;
+    text-align: center;
+    padding: 14px 0;
+    border-left: 1px solid #cccccc;
+  }
+  .btn:last-child {
+    border-left: none;
+  }
+
+  .tab__button {
+    padding: 9px;
+  }
+
+  @-moz-document url-prefix() {
+    .tab__button {
+      padding: 9px;
+    }
+  }
+  .tab__button_export {
+    position: absolute;
+    top: 36px;
+    right: 0;
+    width: 110px;
+  }
+
+  .tab__button_filters {
+    width: 24%;
+  }
+  .tab__button_filters::after {
+    width: 24px;
+    height: 24px;
+    top: 9px;
+    left: -1px;
+  }
+
+  @-moz-document url-prefix() {
+    .tab__button_filters::after {
+      width: 27px;
+      height: 27px;
+      top: 11px;
+    }
+  }
+  .user-info__comment {
+    letter-spacing: 0;
+  }
+
+  .tab__select {
+    margin-top: 0;
+    margin-left: 3%;
+    width: 44%;
+  }
+
+  .tab__label_select i {
+    right: 11px;
+    top: 5px;
+  }
+
+  .project-last__list input[type='checkbox']:checked ~ ul.block__options {
+    height: 365px;
+  }
+}

@@ -1,0 +1,69 @@
+﻿$user-text-color: #d3264e;
+$accardion-right-text-color: #888;
+$accardion-left-text-color: #000;
+
+.project-last__list {
+  min-width: 290px;
+  width: 100%;
+  // hide checkbox
+  input[type='checkbox'] { 
+    display: none; 
+  }
+  // animation accardion press on button
+  input[type='checkbox']:checked ~ ul {
+    -webkit-transition: height 0.5s ease-in-out; 
+       -moz-transition: height 0.5s ease-in-out;
+         -o-transition: height 0.5s ease-in-out;
+            transition: height 0.5s ease-in-out; 
+  }
+  // animation accardion press on button
+  input[type='checkbox']:checked ~ ul.block__options {
+    height: 330px;
+    display: block;
+  }
+    // animation button
+  input[type='checkbox']:checked ~ label > i:before {
+    content: "\f056";
+  }
+}
+
+// Accardion title
+.block__title {
+  display: inline-block;
+  padding: 8px 5px 8px 0;
+  font-size: 22px;
+}
+// Accardion button
+.block__button {
+  display: inline-block;
+}
+// Accardion text
+.block__options {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.5s ease-in-out; 
+     -moz-transition: height 0.5s ease-in-out;
+       -o-transition: height 0.5s ease-in-out;
+          transition: height 0.5s ease-in-out; 
+
+  span {
+    float: right;
+    color: $accardion-right-text-color;
+    text-align: right;
+  }
+
+  a {
+    display: block;
+    padding: 6px 0;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    color: $accardion-left-text-color;
+    border-top: 1px solid #ccc;
+
+    &:hover {
+      color: $user-text-color;
+    }
+  }
+}

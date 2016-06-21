@@ -1,0 +1,11 @@
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.tab__button_filters::after {
+		width: 25px;
+		height: 25px;
+		top: 9px;
+	}
+
+	.tab__button {
+		padding: 7px;
+	}
+}

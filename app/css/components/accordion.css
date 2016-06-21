@@ -1,0 +1,57 @@
+.project-last__list {
+  min-width: 290px;
+  width: 100%;
+}
+.project-last__list input[type='checkbox'] {
+  display: none;
+}
+.project-last__list input[type='checkbox']:checked ~ ul {
+  -webkit-transition: height 0.5s ease-in-out;
+  -moz-transition: height 0.5s ease-in-out;
+  -o-transition: height 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out;
+}
+.project-last__list input[type='checkbox']:checked ~ ul.block__options {
+  height: 330px;
+  display: block;
+}
+.project-last__list input[type='checkbox']:checked ~ label > i:before {
+  content: "\f056";
+}
+
+.block__title {
+  display: inline-block;
+  padding: 8px 5px 8px 0;
+  font-size: 22px;
+}
+
+.block__button {
+  display: inline-block;
+}
+
+.block__options {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.5s ease-in-out;
+  -moz-transition: height 0.5s ease-in-out;
+  -o-transition: height 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out;
+}
+.block__options span {
+  float: right;
+  color: #888888;
+  text-align: right;
+}
+.block__options a {
+  display: block;
+  padding: 6px 0;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+  border-top: 1px solid #ccc;
+}
+.block__options a:hover {
+  color: #d3264e;
+}

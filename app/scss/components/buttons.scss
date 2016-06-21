@@ -1,0 +1,137 @@
+﻿// variables for buttons
+$background-button-color: #f2f2f2;
+$text-button-color: #000;
+$color-border: #ccc;
+$grdient-button-color: #dbdbdb;
+$hover-button-color: #cccccc;
+
+
+// Buttons in tab
+.tab__button {
+  display: inline-block;
+  font-size: 12px;
+  padding: 7px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: $background-button-color;
+  background: -moz-linear-gradient(top, $background-button-color 0%, $grdient-button-color 93%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, $background-button-color 0%, $grdient-button-color 93%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, $background-button-color 0%, $grdient-button-color 93%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#dbdbdb',GradientType=0 ); /* IE6-9 */
+  border: 1px solid $color-border;
+     -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
+  color: $text-button-color;
+  // style on focus
+  &:focus { outline: none; }
+  &:hover {
+    background: -moz-linear-gradient(top, $grdient-button-color 0%, $hover-button-color 93%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, $grdient-button-color 0%, $hover-button-color 93%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, $grdient-button-color 0%, $hover-button-color 93%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbdbdb', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+    &:after {
+      background: $background-button-color;
+      background: -moz-linear-gradient(right, $grdient-button-color 0%, $hover-button-color 93%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(-45deg, $grdient-button-color 0%, $hover-button-color 93%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(225deg, $grdient-button-color 0%, $hover-button-color 93%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbdbdb', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+    }
+  }
+}
+// button expend
+.tab__button_expend {
+  float: left;
+  width: 34%;
+}
+
+// button export
+.tab__button_export {
+  width: 28%;
+  margin-left: 2%;
+
+  // icon excel
+  &::before {
+    display: inline-block;
+    margin-right: 5px;
+    height: 14px;
+    width: 16px;
+    content: '';
+    vertical-align: middle;
+    background: url('../img/icons/excel.png');
+  }
+}
+// button filters
+.tab__button_filters {
+  float: right;
+  width: 30%;
+  position: relative;
+  z-index: 1;
+  border-radius: 0 5px 5px 0;
+  // left border tringle
+  &::after {
+    position: absolute;
+    top: 8px;
+    left: -1px;
+    z-index: -1;
+    width: 22px;
+    height: 22px;
+    content: '';
+    background: $background-button-color;
+    background: -moz-linear-gradient(right, $background-button-color 0%, #dbdbdb 93%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, $background-button-color 0%,#dbdbdb 93%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(225deg, $background-button-color 0%,#dbdbdb 93%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#dbdbdb',GradientType=0 ); /* IE6-9 */
+    border: 1px solid $color-border;
+    border-right: none;
+    border-bottom: none;
+    /* Rotate */
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    /* Rotate Origin */
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+  }
+}
+
+@-moz-document url-prefix() {
+  .tab__button_filters::after {
+    width: 25px;
+    height: 25px;
+    top: 9px;
+  }
+}
+
+// Buttons in Block user
+.btn {
+  display: block;
+  padding: 10px 40px 10px 8px;
+  width: 100%;
+  font-family: Arial;
+  color: $text-button-color;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: left;
+  text-decoration: none;
+  background: $background-button-color;
+  border: none;
+  border-bottom: 1px solid $color-border;
+
+  &:hover {
+    text-decoration: none;
+    background: $color-border;
+  }
+
+  &:focus { outline: none; }
+
+  i { font-size: 14px;}
+
+  .fa-phone { color: $text-button-color; }
+}
+

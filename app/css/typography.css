@@ -1,0 +1,15 @@
+body {
+  font: 14px/20px "Arial", sans-serif;
+  width: 100%;
+  height: 100%;
+  color: black;
+  background: #f2f2f2;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: #d53958;
+}

@@ -1,0 +1,901 @@
+/* line 1, layout.scss */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 10, typography.scss */
+body {
+  font: 14px/20px "Arial", sans-serif;
+  width: 100%;
+  height: 100%;
+  color: black;
+  background: #f2f2f2;
+}
+
+/* line 18, typography.scss */
+a {
+  color: black;
+}
+
+/* line 22, typography.scss */
+a:hover {
+  color: #d53958;
+}
+
+/* line 7, components\menu.scss */
+.page-header__menu-ticker {
+  display: none;
+}
+
+/* line 9, components\menu.scss */
+.page-header__menu-label {
+  display: block;
+  float: left;
+  width: 24px;
+  height: 44px;
+  margin-left: 9px;
+  cursor: default;
+}
+/* line 16, components\menu.scss */
+.page-header__menu-label i {
+  cursor: pointer;
+}
+
+/* line 21, components\menu.scss */
+.page-header__menu {
+  position: fixed;
+  top: 0;
+  left: -194px;
+  z-index: 20;
+  display: block;
+  margin: 44px 0;
+  padding: 0;
+  height: 100%;
+  width: 194px;
+  list-style: none;
+  background-color: #333;
+  overflow: auto;
+  -webkit-transition: left .5s;
+  transition: left .5s;
+}
+/* line 39, components\menu.scss */
+.page-header__menu li {
+  text-align: left;
+  border-bottom: 1px solid black;
+}
+/* line 43, components\menu.scss */
+.page-header__menu li:last-child {
+  border-bottom: none;
+}
+
+/* line 49, components\menu.scss */
+.page-header__link {
+  display: block;
+  padding-left: 15px;
+  width: 100%;
+  color: #8b8b8b;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* line 57, components\menu.scss */
+.page-header__link .fa {
+  font-size: 18px;
+  color: #8b8b8b;
+}
+/* line 62, components\menu.scss */
+.page-header__link:hover {
+  color: white;
+  background-color: black;
+}
+/* line 66, components\menu.scss */
+.page-header__link:hover .fa {
+  color: white;
+}
+
+/* line 72, components\menu.scss */
+.page-header__link_logged {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 10px;
+  line-height: 16px;
+}
+/* line 78, components\menu.scss */
+.page-header__link_logged span {
+  display: block;
+  padding-left: 16px;
+  font-size: 12px;
+  text-transform: none;
+  font-weight: bold;
+}
+
+/* line 87, components\menu.scss */
+.page-header__link_active {
+  color: white;
+  background-color: black;
+}
+/* line 91, components\menu.scss */
+.page-header__link_active .fa {
+  color: white;
+}
+
+/* line 97, components\menu.scss */
+.page-header__link_consult .fa {
+  display: none;
+  color: #c90026;
+}
+
+/* line 103, components\menu.scss */
+.page-header__menu-ticker:checked ~ .page-header__menu {
+  left: 0;
+}
+
+/* line 6, components\icons.scss */
+.fa-plus-circle {
+  font-size: 17px;
+  color: #777777;
+}
+
+/* line 12, components\icons.scss */
+.fa-bars,
+.fa-flag,
+.fa-phone {
+  color: #c90026;
+}
+
+/* line 18, components\icons.scss */
+.fa-flag,
+.fa-phone {
+  font-size: 15px;
+}
+
+/* line 24, components\icons.scss */
+.fa-caret-down {
+  font-size: 10px;
+}
+
+/* line 27, components\icons.scss */
+.fa-public {
+  position: relative;
+  display: inline-block;
+  font: normal 14px/1 'Arail';
+}
+/* line 32, components\icons.scss */
+.fa-public::before {
+  position: absolute;
+  top: -12px;
+  left: 0;
+  display: block;
+  padding: 3px 6px;
+  font-size: 9px;
+  text-transform: uppercase;
+  font-weight: bold;
+  content: 'public';
+  color: #c90026;
+  background-color: white;
+  border: 1px solid #c90026;
+  border-radius: 5px;
+}
+
+/* line 5, components\accordion.scss */
+.project-last__list {
+  min-width: 290px;
+  width: 100%;
+}
+/* line 9, components\accordion.scss */
+.project-last__list input[type='checkbox'] {
+  display: none;
+}
+/* line 13, components\accordion.scss */
+.project-last__list input[type='checkbox']:checked ~ ul {
+  -webkit-transition: height 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out;
+}
+/* line 20, components\accordion.scss */
+.project-last__list input[type='checkbox']:checked ~ ul.block__options {
+  height: 330px;
+  display: block;
+}
+/* line 25, components\accordion.scss */
+.project-last__list input[type='checkbox']:checked ~ label > i:before {
+  content: "\f056";
+}
+
+/* line 31, components\accordion.scss */
+.block__title {
+  display: inline-block;
+  padding: 8px 5px 8px 0;
+  font-size: 22px;
+}
+
+/* line 37, components\accordion.scss */
+.block__button {
+  display: inline-block;
+}
+
+/* line 41, components\accordion.scss */
+.block__options {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out;
+}
+/* line 50, components\accordion.scss */
+.block__options span {
+  float: right;
+  color: #888888;
+  text-align: right;
+}
+/* line 56, components\accordion.scss */
+.block__options a {
+  display: block;
+  padding: 6px 0;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+  border-top: 1px solid #ccc;
+}
+/* line 65, components\accordion.scss */
+.block__options a:hover {
+  color: #d3264e;
+}
+
+/* line 10, components\buttons.scss */
+.tab__button {
+  display: inline-block;
+  font-size: 12px;
+  padding: 7px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #f2f2f2;
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f2f2f2 0%, #dbdbdb 93%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), color-stop(93%, #dbdbdb));
+  background: linear-gradient(to bottom, #f2f2f2 0%, #dbdbdb 93%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#dbdbdb',GradientType=0 );
+  /* IE6-9 */
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  color: black;
+}
+/* line 27, components\buttons.scss */
+.tab__button:focus {
+  outline: none;
+}
+/* line 28, components\buttons.scss */
+.tab__button:hover {
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #dbdbdb 0%, #cccccc 93%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#dbdbdb), color-stop(93%, #cccccc));
+  background: linear-gradient(to bottom, #dbdbdb 0%, #cccccc 93%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dbdbdb', endColorstr='#cccccc',GradientType=0 );
+  /* IE6-9 */
+}
+/* line 33, components\buttons.scss */
+.tab__button:hover:after {
+  background: #f2f2f2;
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #dbdbdb 0%, #cccccc 93%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-linear-gradient(225deg, #dbdbdb 0%, #cccccc 93%);
+  background: linear-gradient(225deg, #dbdbdb 0%, #cccccc 93%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dbdbdb', endColorstr='#cccccc',GradientType=0 );
+  /* IE6-9 */
+}
+
+/* line 43, components\buttons.scss */
+.tab__button_expend {
+  float: left;
+  width: 34%;
+}
+
+/* line 49, components\buttons.scss */
+.tab__button_export {
+  width: 28%;
+  margin-left: 2%;
+}
+/* line 54, components\buttons.scss */
+.tab__button_export::before {
+  display: inline-block;
+  margin-right: 5px;
+  height: 14px;
+  width: 16px;
+  content: '';
+  vertical-align: middle;
+  background: url("../img/icons/excel.png");
+}
+
+/* line 65, components\buttons.scss */
+.tab__button_filters {
+  float: right;
+  width: 30%;
+  position: relative;
+  z-index: 1;
+  border-radius: 0 5px 5px 0;
+}
+/* line 72, components\buttons.scss */
+.tab__button_filters::after {
+  position: absolute;
+  top: 8px;
+  left: -1px;
+  z-index: -1;
+  width: 22px;
+  height: 22px;
+  content: '';
+  background: #f2f2f2;
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #f2f2f2 0%, #dbdbdb 93%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-linear-gradient(225deg, #f2f2f2 0%, #dbdbdb 93%);
+  background: linear-gradient(225deg, #f2f2f2 0%, #dbdbdb 93%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#dbdbdb',GradientType=0 );
+  /* IE6-9 */
+  border: 1px solid #cccccc;
+  border-right: none;
+  border-bottom: none;
+  /* Rotate */
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  /* Rotate Origin */
+  -webkit-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+
+@-moz-document url-prefix() {
+  /* line 104, components\buttons.scss */
+  .tab__button_filters::after {
+    width: 25px;
+    height: 25px;
+    top: 9px;
+  }
+}
+/* line 112, components\buttons.scss */
+.btn {
+  display: block;
+  padding: 10px 40px 10px 8px;
+  width: 100%;
+  font-family: Arial;
+  color: black;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: left;
+  text-decoration: none;
+  background: #f2f2f2;
+  border: none;
+  border-bottom: 1px solid #cccccc;
+}
+/* line 126, components\buttons.scss */
+.btn:hover {
+  text-decoration: none;
+  background: #cccccc;
+}
+/* line 131, components\buttons.scss */
+.btn:focus {
+  outline: none;
+}
+/* line 133, components\buttons.scss */
+.btn i {
+  font-size: 14px;
+}
+/* line 135, components\buttons.scss */
+.btn .fa-phone {
+  color: black;
+}
+
+/* line 14, components\tabs.scss */
+.page-tabs {
+  min-width: 290px;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0;
+}
+/* line 21, components\tabs.scss */
+.page-tabs .tab-content {
+  display: none;
+}
+/* line 25, components\tabs.scss */
+.page-tabs input {
+  display: none;
+}
+/* line 28, components\tabs.scss */
+.page-tabs input:checked + label {
+  color: #555;
+  border: 1px solid #d7d7d7;
+  border-bottom: none;
+  background: #f2f2f2;
+}
+/* line 36, components\tabs.scss */
+.page-tabs .page-tabs__label {
+  background-color: #d7d7d7;
+  border: 1px solid #d7d7d7;
+  border-bottom-width: 0;
+  border-radius: 10px 10px 0 0;
+  border-right-width: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 11px;
+  height: 38px;
+  line-height: 27px;
+  padding: 5px 0;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 50%;
+}
+/* line 56, components\tabs.scss */
+.page-tabs .page-tabs__label::after {
+  font-family: fontawesome;
+  font-weight: normal;
+  padding-left: 5px;
+  color: #c90026;
+  font-size: 15px;
+}
+/* line 63, components\tabs.scss */
+.page-tabs .page-tabs__label[for*="1"]::after {
+  content: "\f024";
+}
+/* line 66, components\tabs.scss */
+.page-tabs .page-tabs__label[for*="2"]::after {
+  content: "\f095";
+}
+
+/* line 72, components\tabs.scss */
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2 {
+  display: block;
+}
+
+/* line 78, components\tabs.scss */
+.tab__functional {
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #d7d7d7;
+  border-top: none;
+  width: 100%;
+}
+
+/* line 87, components\tabs.scss */
+.container {
+  padding: 10px;
+  background-color: white;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+/* line 93, components\tabs.scss */
+.tab__user {
+  margin-top: 8px;
+  border: 1px solid #d7d7d7;
+}
+
+/* line 98, components\tabs.scss */
+.tab__user_shadow {
+  -webkit-box-shadow: 2px 2px 5px 0 rgba(162, 162, 162, 0.51);
+  box-shadow: 2px 2px 5px 0 rgba(162, 162, 162, 0.51);
+}
+
+/* line 104, components\tabs.scss */
+.user-info__professional {
+  width: 100%;
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #d3264e;
+}
+/* line 111, components\tabs.scss */
+.user-info__professional .date {
+  position: relative;
+  display: block;
+  float: right;
+  padding-right: 8px;
+  font-size: 9px;
+  color: #888888;
+}
+/* line 120, components\tabs.scss */
+.user-info__professional .new {
+  display: block;
+  float: right;
+  padding: 0 12px;
+  text-transform: uppercase;
+  font-size: 9px;
+  font-weight: bold;
+  color: white;
+  background-color: #c90026;
+  border-radius: 6px;
+}
+/* line 132, components\tabs.scss */
+.user-info__professional .new_viewed {
+  background-color: #888888;
+}
+
+/* line 135, components\tabs.scss */
+.user-info__name {
+  padding: 3px 0 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* line 141, components\tabs.scss */
+.user-info__company {
+  padding: 3px 0;
+  font-weight: bold;
+  font-size: 14px;
+}
+/* line 146, components\tabs.scss */
+.user-info__company span {
+  display: inline-block;
+  padding: 0 11px;
+  text-transform: uppercase;
+  font-size: 9px;
+  font-weight: bold;
+  line-height: 16px;
+  color: #c90026;
+  background-color: white;
+  border: 1px solid #c90026;
+  border-radius: 5px;
+}
+
+/* line 160, components\tabs.scss */
+.user-info__start-date {
+  font-size: 12px;
+}
+/* line 163, components\tabs.scss */
+.user-info__start-date span {
+  color: #888888;
+}
+
+/* line 166, components\tabs.scss */
+.user-info__comment {
+  font-size: 12px;
+  line-height: 1.4em;
+  color: #d3264e;
+  letter-spacing: -1px;
+}
+
+/* line 175, components\tabs.scss */
+.user-avalibaly__title {
+  text-decoration: underline;
+  font-size: 12px;
+  color: #d3264e;
+}
+
+/* line 180, components\tabs.scss */
+text
+.avalibaly-info {
+  padding-left: 17px;
+}
+
+/* line 7, components\select.scss */
+.tab__select {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  font-size: 10px;
+  color: #888888;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background: white url(../img/tringle.png) no-repeat 95% center;
+  border: 1px solid #bebebe;
+  cursor: pointer;
+}
+/* line 25, components\select.scss */
+.tab__select:focus {
+  outline: none;
+}
+/* line 28, components\select.scss */
+.tab__select::-ms-expand {
+  display: none;
+}
+
+/* line 17, app.scss */
+.wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* line 25, app.scss */
+.clearfix {
+  display: inline-block;
+}
+/* line 26, app.scss */
+.clearfix::after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: ' ';
+  clear: both;
+  height: 0;
+}
+
+/* line 39, app.scss */
+.page-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 44px;
+  min-width: 320px;
+  width: 100%;
+  line-height: 51px;
+  text-align: center;
+  background: white;
+}
+
+/* line 53, app.scss */
+.page-header__logo {
+  display: inline-block;
+  height: 44px;
+  width: 120px;
+  font-size: 0;
+  background: url("../img/logo.png") no-repeat 0;
+}
+
+/* line 62, app.scss */
+.page-main {
+  position: absolute;
+  right: 0;
+  top: 44px;
+  bottom: 0;
+  left: 0;
+  padding-left: 7px;
+  padding-right: 12px;
+  overflow-y: auto;
+}
+
+/* line 73, app.scss */
+.page-main__project-list {
+  display: inline-block;
+  padding-top: 10px;
+  width: 100%;
+  color: #888888;
+  text-decoration: none;
+}
+/* line 80, app.scss */
+.page-main__project-list::before {
+  display: inline-block;
+  height: 15px;
+  margin-left: 2px;
+  margin-right: 7px;
+  width: 10px;
+  content: '';
+  vertical-align: middle;
+  background: url("../img/left.png") no-repeat 0 0;
+}
+
+@media all and (min-width: 750px) {
+  /* line 5, ipad-layout.scss */
+  .page-header {
+    min-width: 200px;
+    width: 200px;
+    height: 100%;
+  }
+
+  /* line 11, ipad-layout.scss */
+  .page-header__logo {
+    background: url("../img/logo-ipad.png") no-repeat 0;
+    height: 47px;
+    width: 175px;
+    position: absolute;
+    top: 24px;
+    right: 14px;
+  }
+
+  /* line 20, ipad-layout.scss */
+  .page-header__menu-label {
+    display: none;
+    position: static;
+  }
+
+  /* line 25, ipad-layout.scss */
+  .page-header__menu {
+    background-color: #333;
+    display: block;
+    height: 100%;
+    list-style: none;
+    margin: 88px 0;
+    padding: 0;
+    position: static;
+    width: 100%;
+  }
+
+  /* line 37, ipad-layout.scss */
+  .page-header__link_active .fa {
+    display: none;
+  }
+
+  /* line 41, ipad-layout.scss */
+  .page-header__link_consult .fa {
+    display: inline-block;
+  }
+
+  /* line 45, ipad-layout.scss */
+  .page-header__link_logout .fa {
+    color: #c90026;
+  }
+
+  /* line 48, ipad-layout.scss */
+  .fa-plus-circle {
+    font-size: 21px;
+  }
+
+  /* line 51, ipad-layout.scss */
+  .page-main {
+    padding-right: 40px;
+    top: 0;
+    left: 230px;
+  }
+
+  /* line 57, ipad-layout.scss */
+  .scroller {
+    position: relative;
+  }
+
+  /* line 62, ipad-layout.scss */
+  .block__title {
+    font-size: 28px;
+    padding: 17px 5px 20px 0;
+  }
+
+  /* line 68, ipad-layout.scss */
+  .page-main__project-last {
+    padding-right: 0;
+  }
+
+  /* line 72, ipad-layout.scss */
+  .page-tabs li:first-child {
+    width: 40%;
+  }
+  /* line 73, ipad-layout.scss */
+  .page-tabs li {
+    width: 60%;
+  }
+
+  /* line 76, ipad-layout.scss */
+  .tab__button_expend {
+    width: 24%;
+  }
+
+  /* line 81, ipad-layout.scss */
+  .buttons {
+    font-size: 0;
+    direction: rtl;
+  }
+
+  /* line 86, ipad-layout.scss */
+  .btn {
+    display: inline-block;
+    width: 33.33%;
+    border-bottom: none;
+    text-align: center;
+    padding: 14px 0;
+    border-left: 1px solid #cccccc;
+  }
+  /* line 94, ipad-layout.scss */
+  .btn:last-child {
+    border-left: none;
+  }
+
+  /* line 97, ipad-layout.scss */
+  .tab__button {
+    padding: 9px;
+  }
+
+  @-moz-document url-prefix() {
+    /* line 100, ipad-layout.scss */
+    .tab__button {
+      padding: 9px;
+    }
+  }
+  /* line 103, ipad-layout.scss */
+  .tab__button_export {
+    position: absolute;
+    top: 36px;
+    right: 0;
+    width: 110px;
+  }
+
+  /* line 110, ipad-layout.scss */
+  .tab__button_filters {
+    width: 24%;
+  }
+  /* line 113, ipad-layout.scss */
+  .tab__button_filters::after {
+    width: 24px;
+    height: 24px;
+    top: 9px;
+    left: -1px;
+  }
+
+  @-moz-document url-prefix() {
+    /* line 121, ipad-layout.scss */
+    .tab__button_filters::after {
+      width: 27px;
+      height: 27px;
+      top: 11px;
+    }
+  }
+  /* line 128, ipad-layout.scss */
+  .user-info__comment {
+    letter-spacing: 0;
+  }
+
+  /* line 131, ipad-layout.scss */
+  .tab__select {
+    margin-top: 0;
+    margin-left: 3%;
+    width: 44%;
+  }
+
+  /* line 139, ipad-layout.scss */
+  .tab__label_select i {
+    right: 11px;
+    top: 5px;
+  }
+
+  /* line 147, ipad-layout.scss */
+  .project-last__list input[type='checkbox']:checked ~ ul.block__options {
+    height: 365px;
+  }
+}
+@media all and (min-width: 1125px) {
+  /* line 6, pc-layout.scss */
+  .scroller {
+    width: 880px;
+    margin: 0 auto;
+  }
+
+  /* line 12, pc-layout.scss */
+  .block__options li {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 10px;
+  }
+  /* line 17, pc-layout.scss */
+  .block__options li:first-child {
+    padding-right: 5px;
+  }
+  /* line 20, pc-layout.scss */
+  .block__options li:last-child {
+    padding-left: 5px;
+  }
+
+  /* line 28, pc-layout.scss */
+  .project-last__list input[type='checkbox']:checked ~ ul.block__options {
+    height: 180px;
+  }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* line 2, ie10-layout.scss */
+  .tab__button_filters::after {
+    width: 25px;
+    height: 25px;
+    top: 9px;
+  }
+
+  /* line 8, ie10-layout.scss */
+  .tab__button {
+    padding: 7px;
+  }
+}

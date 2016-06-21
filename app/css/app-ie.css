@@ -1,0 +1,12 @@
+.tab__button {
+  padding: 7px;
+}
+
+.tab__button_filters {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+.tab__button_filters::after {
+  display: none;
+}

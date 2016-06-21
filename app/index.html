@@ -1,0 +1,170 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Responsive design</title>
+  <meta name="description" content="task2 responsive design">
+  <meta name="author" content="Kudla Vitaliy">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="bower/HTML5-Reset/assets/css/reset.css">
+  <link rel="stylesheet" href="bower/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/app.css">
+  <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="css/app-ie.css"/>
+  <![endif]-->
+
+  <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+  your browser</a> to improve your experience.</p>
+<![endif]-->
+<div class="wrapper">
+  <header class="page-header clearfix"><!-- Header page -->
+    <input type="checkbox" id="hmt" class="page-header__menu-ticker"><!-- Menu header -->
+    <label class="page-header__menu-label" for="hmt"><i class="fa fa-bars fa-2x"></i></label>
+    <ul class="page-header__menu">
+      <li><a href="#" class="page-header__link">Expert search</a></li>
+      <li><a href="#" class="page-header__link">Saved experts</a></li>
+      <li><a href="#" class="page-header__link page-header__link_active">Projects <i class="fa fa-flag"></i></a></li>
+      <li><a href="#" class="page-header__link page-header__link_consult">Consultations <i class="fa fa-phone"></i></a></li>
+      <li><a href="#" class="page-header__link">Events</a></li>
+      <li><a href="#" class="page-header__link page-header__link_logout"><i class="fa fa-sign-out"></i> Logout</a></li>
+      <li><a href="#" class="page-header__link page-header__link_logged"><i class="fa fa-user"></i> Logged in as <span>Girish Gopalan</span></a></li>
+    </ul>
+    <a href="#" class="page-header__logo"></a><!-- Logo -->
+  </header>
+
+  <main class="page-main">
+    <div class="scroller">
+      <a href="#" class="page-main__project-list">Project List</a><!-- Projects link -->
+      <section class="page-main__project-last"><!-- Accordion -->
+        <div class="project-last__list">
+          <h3 class="block__title">Test Project last</h3>
+          <input type="checkbox" name="item" id="item1"/>
+          <label class="block__button" for="item1"><i class="fa fa-plus-circle fa-1x"></i></label>
+          <ul class="block__options">
+            <li>
+              <a href="#" class="clearfix">Create date <span>01/20/15</span></a>
+              <a href="#" class="clearfix">Target industries <span>Wireline Telephone<br/>Equipment</span></a>
+              <a href="#" class="clearfix">Bios sent <span>10</span></a>
+              <a href="#" class="clearfix">Calls scheduled <span>2</span></a>
+            </li>
+            <li>
+              <a href="#" class="clearfix">Requested consultations <span>10</span></a>
+              <a href="#" class="clearfix">Target companies <span>Frontier Communications<br/>Corporation [FTR]</span></a>
+              <a href="#" class="clearfix">Calls completed <span>2</span></a>
+              <a href="#" class="clearfix">Calls in scheduling <span>1</span></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="page-tabs"><!-- Tab -->
+        <input type="radio" name="tabs" id="tab1" checked>
+        <label class="page-tabs__label" for="tab1">Experts</label><!-- Tab label -->
+        <input type="radio" name="tabs" id="tab2">
+        <label class="page-tabs__label" for="tab2">Consultations</label>
+
+        <section id="content1" class="tab-content"><!-- Tab label -->
+          <div class="tab__functional clearfix"><!-- Block buttons and select -->
+            <button class="tab__button tab__button_expend">Expend All</button>
+            <button class="tab__button tab__button_filters"><i class="fa fa-filter"></i> Filters</button>
+            <button class="tab__button tab__button_export">Export</button>
+            <label class="tab__label_select"><!--  select -->
+              <select class="tab__select">
+                <option>Sort by Status</option>
+                <option>Sort by Users</option>
+                <option>Sort by Experts</option>
+              </select>
+            </label>
+          </div>
+          <div class="tab__user tab__user_shadow"><!--  Block User -->
+            <div class="user-info container"><!--  Section User info  -->
+              <h4 class="user-info__professional clearfix">Industry Expert <span class="new">new</span> <span class="date">07/13/14</span></h4>
+              <h2 class="user-info__name">Mikhail Semichev</h2>
+              <h3 class="user-info__company">EPAM <span>public</span></h3>
+              <p class="user-info__start-date">FE developer <span>(12/01/11 - Present)</span></p>
+              <p class="user-info__comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, qui quia
+                aperiam. Cum at repellendus ex quidem, maiores!</p>
+              <p class="user-info__comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, necessitatibus.
+                Eum possimus, ut placeat quod?</p>
+            </div>
+            <div class="user-avalibaly container"><!--  Section Confirmed Availability  -->
+              <h6 class="user-avalibaly__title">Confirmed Availability</h6>
+              <div class="avalibaly-info">
+                <p class="user-info__comment">Monday 07/21/15 11:00 AM - 07:13 АМ (UTC-05:00) Eastern Time (US & Canada)</p>
+                <p class="user-info__comment">Monday 07/20/15 07:00 AM - 10:00 АМ (UTC-05:00) Eastern Time (US & Canada)</p>
+              </div>
+            </div>
+            <div class="buttons"><!--  Section buttons  -->
+              <button class="btn"><i class="fa fa-phone"></i> Schedule</button>
+              <button class="btn"><i class="fa fa-info-circle"></i> Request Info</button>
+              <button class="btn"><i class="fa fa-close"></i> Decline</button>
+            </div>
+          </div>
+
+          <div class="tab__user tab__user_shadow"><!--  Block User -->
+            <div class="user-info container"><!--  Section User info  -->
+              <h4 class="user-info__professional clearfix">Competitor <span class="new">new</span> <span class="date">03/13/14</span></h4>
+              <h2 class="user-info__name">Mikhail Kuznetsov</h2>
+              <h3 class="user-info__company">Yandex <span>public parent</span></h3>
+              <p class="user-info__start-date">FE developer <span>(12/01/11 - 06/05/13)</span></p>
+            </div>
+
+            <div class="buttons">
+              <button class="btn"><i class="fa fa-phone"></i> Schedule</button>
+              <button class="btn"><i class="fa fa-info-circle"></i> Request Info</button>
+              <button class="btn"><i class="fa fa-close"></i> Decline</button>
+            </div>
+          </div>
+
+          <div class="tab__user tab__user_shadow"><!--  Block User -->
+            <div class="user-info container"><!--  Section User info  -->
+              <h4 class="user-info__professional clearfix">Customer <span class="new new_viewed">viewed</span> <span class="date">03/11/15</span></h4>
+              <h2 class="user-info__name">Nikita Reshetnikov</h2>
+              <h3 class="user-info__company">Google <span>public</span></h3>
+              <p class="user-info__start-date">FE developer <span>(12/01/11 - 06/05/13)</span></p>
+            </div>
+
+            <div class="buttons"><!--  Section buttons  -->
+              <button class="btn"><i class="fa fa-phone"></i> Schedule</button>
+              <button class="btn"><i class="fa fa-info-circle"></i> Request Info</button>
+              <button class="btn"><i class="fa fa-close"></i> Decline</button>
+            </div>
+          </div>
+
+          <div class="tab__user tab__user_shadow"><!--  Block User -->
+            <div class="user-info container"><!--  Section User info  -->
+              <h4 class="user-info__professional clearfix">Customer <span class="new new_viewed">viewed</span> <span class="date">03/11/15</span></h4>
+              <h2 class="user-info__name">John Weider</h2>
+              <h3 class="user-info__company">Google <span>public</span></h3>
+              <p class="user-info__start-date">FE developer <span>(12/01/11 - 06/05/13)</span></p>
+            </div>
+
+            <div class="buttons"><!--  Section buttons  -->
+              <button class="btn"><i class="fa fa-phone"></i> Schedule</button>
+              <button class="btn"><i class="fa fa-info-circle"></i> Request Info</button>
+              <button class="btn"><i class="fa fa-close"></i> Decline</button>
+            </div>
+          </div>
+
+        </section>
+
+        <section id="content2" class="tab-content">
+          <p>
+            Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.
+          </p>
+        </section>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

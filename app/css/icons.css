@@ -1,0 +1,20 @@
+﻿.ico {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(../img/sprite.png);
+}
+
+.ico-close {
+  background-position: 0;
+}
+
+.ico-collapse {
+  background-position: -16px;
+}
+
+.ico-open {
+  background-position: -32px;
+}
+
+/*  <i class="ico ico-close" />  */

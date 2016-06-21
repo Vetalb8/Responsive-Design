@@ -1,0 +1,140 @@
+.tab__button {
+  display: inline-block;
+  font-size: 12px;
+  padding: 7px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #f2f2f2;
+  background: -moz-linear-gradient(top, #f2f2f2 0%, #dbdbdb 93%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f2f2f2 0%, #dbdbdb 93%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f2f2f2 0%, #dbdbdb 93%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#dbdbdb',GradientType=0 );
+  /* IE6-9 */
+  border: 1px solid #cccccc;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  color: black;
+}
+.tab__button:focus {
+  outline: none;
+}
+.tab__button:hover {
+  background: -moz-linear-gradient(top, #dbdbdb 0%, #cccccc 93%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #dbdbdb 0%, #cccccc 93%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #dbdbdb 0%, #cccccc 93%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dbdbdb', endColorstr='#cccccc',GradientType=0 );
+  /* IE6-9 */
+}
+.tab__button:hover:after {
+  background: #f2f2f2;
+  background: -moz-linear-gradient(right, #dbdbdb 0%, #cccccc 93%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #dbdbdb 0%, #cccccc 93%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(225deg, #dbdbdb 0%, #cccccc 93%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dbdbdb', endColorstr='#cccccc',GradientType=0 );
+  /* IE6-9 */
+}
+
+.tab__button_expend {
+  float: left;
+  width: 34%;
+}
+
+.tab__button_export {
+  width: 28%;
+  margin-left: 2%;
+}
+.tab__button_export::before {
+  display: inline-block;
+  margin-right: 5px;
+  height: 14px;
+  width: 16px;
+  content: '';
+  vertical-align: middle;
+  background: url("../img/icons/excel.png");
+}
+
+.tab__button_filters {
+  float: right;
+  width: 30%;
+  position: relative;
+  z-index: 1;
+  border-radius: 0 5px 5px 0;
+}
+.tab__button_filters::after {
+  position: absolute;
+  top: 8px;
+  left: -1px;
+  z-index: -1;
+  width: 22px;
+  height: 22px;
+  content: '';
+  background: #f2f2f2;
+  background: -moz-linear-gradient(right, #f2f2f2 0%, #dbdbdb 93%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #f2f2f2 0%, #dbdbdb 93%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(225deg, #f2f2f2 0%, #dbdbdb 93%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#dbdbdb',GradientType=0 );
+  /* IE6-9 */
+  border: 1px solid #cccccc;
+  border-right: none;
+  border-bottom: none;
+  /* Rotate */
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  /* Rotate Origin */
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+
+@-moz-document url-prefix() {
+  .tab__button_filters::after {
+    width: 25px;
+    height: 25px;
+    top: 9px;
+  }
+}
+.btn {
+  display: block;
+  padding: 10px 40px 10px 8px;
+  width: 100%;
+  font-family: Arial;
+  color: black;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: left;
+  text-decoration: none;
+  background: #f2f2f2;
+  border: none;
+  border-bottom: 1px solid #cccccc;
+}
+.btn:hover {
+  text-decoration: none;
+  background: #cccccc;
+}
+.btn:focus {
+  outline: none;
+}
+.btn i {
+  font-size: 14px;
+}
+.btn .fa-phone {
+  color: black;
+}

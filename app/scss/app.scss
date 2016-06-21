@@ -1,0 +1,99 @@
+// variables for app
+$page-header-background: #fff;
+$color-link-project: #888;
+// Style for mobile
+@import 'layout';
+// Style for typography
+@import 'typography';
+// Style for components
+@import 'components/menu';
+@import 'components/icons';
+@import 'components/accordion';
+@import 'components/buttons';
+@import 'components/tabs';
+@import 'components/select';
+
+// PAGE STYLE
+.wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+// class clearfix
+.clearfix {
+  &::after {
+   visibility: hidden;
+   display: block;
+   font-size: 0;
+   content: ' ';
+   clear: both;
+   height: 0;
+  }
+
+  display: inline-block;
+}
+
+// Page Header .page-header
+.page-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 44px;
+  min-width: 320px;
+  width: 100%;
+  line-height: 51px;
+  text-align: center;
+  background: $page-header-background;
+}
+
+// Logo
+.page-header__logo {
+  display: inline-block;
+  height: 44px;
+  width: 120px;
+  font-size: 0;
+  background: url('../img/logo.png') no-repeat 0;
+}
+
+// Page Main
+.page-main {
+  position: absolute;
+  right: 0;
+  top: 44px;
+  bottom: 0;
+  left: 0;
+  padding-left: 7px;
+  padding-right: 12px;
+  overflow-y: auto;
+}
+ // Link to project list
+.page-main__project-list {
+  display: inline-block;
+  padding-top: 10px;
+  width: 100%;
+  color: $color-link-project;
+  text-decoration: none;
+  // icon <
+  &::before {
+    display: inline-block;
+    height: 15px;
+    margin-left: 2px;
+    margin-right: 7px;
+    width: 10px;
+    content: '';
+    vertical-align: middle;
+    background: url('../img/left.png') no-repeat 0 0;
+  }
+}
+
+// Style for ipad rule media
+@import 'ipad-layout';
+
+// Style for pc rule media
+@import 'pc-layout';
+
+// Style for ie 10-11
+@import 'ie10-layout';

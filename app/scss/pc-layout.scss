@@ -1,0 +1,32 @@
+$color-border: #ccc;
+
+@media all and (min-width: 1125px) {
+
+  // .page-main 
+  .scroller {
+    width: 880px;
+    margin: 0 auto;
+  }
+
+  .block__options {
+    li {
+      display: block;
+      float: left;
+      width: 50%;
+      height: 10px;
+      &:first-child {
+        padding-right: 5px;
+      }
+      &:last-child {
+        padding-left: 5px;
+      }
+    }
+  }
+
+  .project-last__list {
+    // animation accardion press on button
+    input[type='checkbox']:checked ~ ul.block__options {
+      height: 180px;
+    }
+  }
+}

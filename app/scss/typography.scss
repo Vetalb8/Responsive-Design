@@ -1,0 +1,24 @@
+﻿// variables for typography
+//body
+$font: 14px/20px 'Arial', sans-serif;
+$text-color: #000;
+$background-color: #f2f2f2;
+//link
+$link-text-color: #000;
+$link-hover: #d53958;
+
+body {
+  font: $font;
+  width: 100%;
+  height: 100%;
+  color: $text-color;
+  background: $background-color;
+}
+
+a {
+  color: $link-text-color;
+}
+
+a:hover {
+  color: $link-hover;
+}

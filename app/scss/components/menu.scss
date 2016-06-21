@@ -1,0 +1,106 @@
+﻿$icons-color: #c90026;
+$icons-color-in-menu: #8b8b8b; 
+$icons-color-in-menu-hover: #fff;
+$background-color-in-menu-hover: #000;
+
+// hide menu input
+.page-header__menu-ticker { display: none; }
+// menu label
+.page-header__menu-label {
+  display: block;
+  float: left;
+  width: 24px;
+  height: 44px;
+  margin-left: 9px;
+  cursor: default;
+  i {
+    cursor: pointer;
+  }
+}
+// menu content
+.page-header__menu {
+  position: fixed;
+  top: 0;
+  left: -194px;
+  z-index: 20;
+  display: block;
+  margin: 44px 0;
+  padding: 0;
+  height: 100%;
+  width: 194px;
+  list-style: none;
+  background-color: #333;
+  overflow: auto;
+  -moz-transition: left .5s;
+  -o-transition: left .5s;
+  -webkit-transition: left .5s;
+  transition: left .5s;
+
+  li {
+    text-align: left;
+    border-bottom: 1px solid $background-color-in-menu-hover;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+// menu item
+.page-header__link {
+  display: block;
+  padding-left: 15px;
+  width: 100%;
+  color: $icons-color-in-menu;
+  text-decoration: none;
+  text-transform: uppercase;
+  // color icons
+  .fa {
+    font-size: 18px;
+    color: $icons-color-in-menu;
+  }
+  // color hover
+  &:hover {
+    color: $icons-color-in-menu-hover;
+    background-color: $background-color-in-menu-hover;
+      
+  .fa {
+      color: $icons-color-in-menu-hover;
+    }
+  }
+}
+// item in menu logged
+.page-header__link_logged {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 10px;
+    line-height: 16px;
+
+    span {
+      display: block;
+      padding-left: 16px;
+      font-size: 12px;
+      text-transform: none;
+      font-weight: bold;
+    }
+}
+// item active
+.page-header__link_active {
+    color: $icons-color-in-menu-hover;
+    background-color: $background-color-in-menu-hover;
+
+    .fa {
+      color: $icons-color-in-menu-hover;
+    }
+}
+// hide icon for item consult
+.page-header__link_consult {
+  .fa {
+    display: none;
+    color: $icons-color;
+  }
+}
+// animation menu when you press on button
+.page-header__menu-ticker:checked ~ .page-header__menu {
+  left: 0;
+}
+

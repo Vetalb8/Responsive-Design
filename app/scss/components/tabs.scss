@@ -1,0 +1,183 @@
+﻿// variables for tabs
+$label-background-color: #d7d7d7;
+$label-color-border: #d7d7d7;
+$label-background-color-active: #f2f2f2;
+$section-color-border: #d7d7d7;
+$user-text-color: #d3264e;
+$user-date-color: #888;
+$user-info-back-color: #fff;
+
+$icons-color: #c90026;
+$fa-new-color: #fff;
+
+// Block TABS
+.page-tabs {
+  min-width: 290px;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0;
+
+  // tab content
+  .tab-content {
+    display: none;
+  }
+
+  input {
+    display: none;
+    // стили для активной вкладки 
+    &:checked + label {
+      color: #555;
+      border: 1px solid $label-color-border;
+      border-bottom: none;
+      background: $label-background-color-active;
+    }
+  }
+
+  .page-tabs__label {
+    background-color: #d7d7d7;
+    border: 1px solid #d7d7d7;
+    border-bottom-width: 0;
+    border-radius: 10px 10px 0 0;
+    border-right-width: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 11px;
+    height: 38px;
+    line-height: 27px;
+    padding: 5px 0;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 50%;
+
+    &::after {
+      font-family: fontawesome;
+      font-weight: normal;
+      padding-left: 5px;
+      color: $icons-color;
+      font-size: 15px;
+    }
+    &[for*="1"]::after {
+      content: "\f024";
+    }
+    &[for*="2"]::after {
+      content: "\f095";
+    }
+  }
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2 {
+  display: block;
+}
+
+// Block buttons and select
+.tab__functional {
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid $section-color-border;
+  border-top: none;
+  width: 100%;
+}
+
+// container for padding content
+.container {
+  padding: 10px;
+  background-color: $user-info-back-color;
+  border-bottom: 1px solid $label-color-border;
+}
+// Block user
+.tab__user {
+  margin-top: 8px;
+  border: 1px solid $section-color-border;
+}
+// shadow for user block
+.tab__user_shadow {
+  -webkit-box-shadow: 2px 2px 5px 0 rgba(162,162,162,0.51);
+     -moz-box-shadow: 2px 2px 5px 0 rgba(162,162,162,0.51);
+          box-shadow: 2px 2px 5px 0 rgba(162,162,162,0.51);
+}
+// section user profession
+.user-info__professional {
+  width: 100%;
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: $user-text-color;
+  // style fo date
+  .date {
+    position: relative;
+    display: block;
+    float: right;
+    padding-right: 8px;
+    font-size: 9px;
+    color: $user-date-color;
+  }
+  // style for new
+  .new {
+    display: block;
+    float: right;
+    padding: 0 12px;
+    text-transform: uppercase;
+    font-size: 9px;
+    font-weight: bold;
+    color: $fa-new-color;
+    background-color: $icons-color;
+    border-radius: 6px;
+  }
+  // style for viewed
+  .new_viewed { background-color: $user-date-color; }
+}
+// style for user name
+.user-info__name {
+  padding: 3px 0 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+// style for user company
+.user-info__company {
+  padding: 3px 0;
+  font-weight: bold;
+  font-size: 14px;
+  // icon public
+  span {
+    display: inline-block;
+    padding: 0 11px;
+    text-transform: uppercase;
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 16px;
+    color: $icons-color;
+    background-color: $fa-new-color;
+    border: 1px solid $icons-color;
+    border-radius: 5px;
+  }
+}
+// style for start date
+.user-info__start-date {
+  font-size: 12px;
+  
+  span { color: $user-date-color; }
+}
+// style for text
+.user-info__comment {
+  font-size: 12px;
+  line-height: 1.4em;
+  color: $user-text-color;
+  letter-spacing: -1px;
+}
+
+// Section Availability
+// title
+.user-avalibaly__title {
+  text-decoration: underline;
+  font-size: 12px;
+  color: $user-text-color;
+}
+text
+.avalibaly-info {
+  padding-left: 17px;
+}

@@ -1,0 +1,47 @@
+﻿// variables for icons
+$circle-color: #777;
+$icons-color: #c90026;
+$fa-new-color: #fff;
+
+.fa-plus-circle {
+  font-size: 17px;
+  color: $circle-color;
+}
+
+// tabs icons
+.fa-bars,
+.fa-flag,
+.fa-phone {
+  color: $icons-color;
+}
+
+.fa-flag,
+.fa-phone {
+  font-size: 15px;
+}
+
+// select icon
+.fa-caret-down { font-size: 10px; }
+
+// .fa-public
+.fa-public {
+  position: relative;
+  display: inline-block;
+  font: normal 14px/1 'Arail';
+
+  &::before {
+    position: absolute;
+    top: -12px;
+    left: 0;
+    display: block;
+    padding: 3px 6px;
+    font-size: 9px;
+    text-transform: uppercase;
+    font-weight: bold;
+    content: 'public';
+    color: $icons-color;
+    background-color: $fa-new-color;
+    border: 1px solid $icons-color;
+    border-radius: 5px;
+  }
+}
